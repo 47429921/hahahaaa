@@ -1,0 +1,300 @@
+.modal-open{overflow:hidden}.modal{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1050;display:none;overflow:hidden;-webkit-overflow-scrolling:touch;outline:0}.modal.fade .modal-dialog{-webkit-transition:-webkit-transform .6s ease-out;-o-transition:transform .6s ease-out,-o-transform .6s ease-out;transition:-webkit-transform .6s ease-out;transition:transform .6s ease-out;transition:transform .6s ease-out,-webkit-transform .6s ease-out,-o-transform .6s ease-out;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}.modal.in .modal-dialog{-webkit-transform:translate(0,0);-ms-transform:translate(0,0);-o-transform:translate(0,0);transform:translate(0,0)}.modal-open .modal{overflow-x:hidden;overflow-y:auto}.modal-dialog{position:relative;width:100%;height:100%;margin:0}@media screen\0{.modal-dialog{height:auto}}.modal-content{position:relative;background-color:#fff;-webkit-background-clip:padding-box;background-clip:padding-box;border:1px solid rgba(0,0,0,.2);border-radius:0;border:none;height:auto;min-height:100%}.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1040;background-color:#000}.modal-backdrop.fade{opacity:0}.modal-backdrop.in{opacity:.5}.modal-header{height:40px}.modal-header::after{display:table;clear:both;content:""}.modal-header .close{float:right;cursor:pointer;text-indent:-9999999px;background:0 0;border:none;padding:10px 15px 0;margin-right:6px;margin-top:3px}.modal-header .close:after{content:"";position:absolute;right:5px;top:0;width:35px;height:35px;background:transparent url(https://www.paypalobjects.com/digitalassets/c/website/marketing/global/kui/organisms/modal/close-arrow.png) center center no-repeat}.modal-title{margin:0;line-height:1.5}.modal-body{position:relative;padding:0;padding-top:15%}.modal-body iframe{width:100%;height:60%;min-height:382px}.modal-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}@media (min-width:544px){.modal-dialog{width:720px;margin:0 auto}.modal-content{border-radius:1rem;outline:0;min-height:initial}.modal-sm{width:300px}.modal-body{padding:0 20px 7px}.modal.fade .modal-dialog{-webkit-transition:none;-o-transition:none;transition:none;-webkit-transform:none;transform:none}}@media only screen and (min-device-width:320px) and (max-device-width:736px) and (orientation:landscape){.modal-dialog{width:100%}.modal-body iframe{min-height:auto}}.modal-container{display:none}@media (min-width:1600px){.modal-dialog{width:50%}}@media (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait){.modal{top:210px}}@media (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape){.modal{top:90px}}@media (min-device-width:375px) and (max-device-width:667px){.panel .panels__panel .panels__panel__image{width:45px;height:45px;margin-right:15px}}@media (min-width:1025px){.modal.in .modal-dialog{top:50%;left:50%;position:absolute;height:auto;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.modal-dialog .modal-body .video-player,.modal-dialog .modal-body div[id$="-video"]{position:relative;display:block;height:0;padding:0;overflow:hidden;padding-bottom:56.25%}.modal-dialog .modal-body .video-player iframe,.modal-dialog .modal-body .video-player video,.modal-dialog .modal-body div[id$="-video"] iframe,.modal-dialog .modal-body div[id$="-video"] video{position:absolute;top:0;bottom:0;left:0;width:100%;height:100%;border:0}}
+
+/********* px-video.css ************/
+
+/* utilities */
+.sr-only {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+.show-inline {
+  display: inline-block;
+}
+
+/* containers */
+.px-video-img-captions-container * {
+  box-sizing: border-box;
+}
+.px-video-img-captions-container {
+  position: relative;
+  background-color: #FFF;
+}
+.px-video-container {
+  position: relative;
+}
+.px-video-container .loading-spinner {
+  background: no-repeat url('https://www.paypalobjects.com/webstatic/es_MX/mktg/logos-buttons/redesign/loading.gif');
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  width: 45px;
+  height: 45px;
+  margin-left: -30px;
+  margin-top: -30px;
+  text-indent: -999em;
+  overflow: hidden;
+}
+
+/* progress indicator */
+.px-video-progress {
+  width: 100%;
+  height: 10px;
+}
+.px-video-progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  border: none;
+}
+.px-video-progress[value]::-webkit-progress-bar {
+  background-color: #E6E6E6;
+}
+.px-video-progress[value]::-webkit-progress-value {
+  background-color: #009CDF;
+}
+
+/* caption area */
+.px-video-captions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: .5em;
+  min-height: 2.5em;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.1em;
+  text-align: center;
+  opacity: 0.75;
+}
+
+/* buttons */
+.px-video-controls button {
+  border: 1px #fff solid;
+  background: transparent;
+  padding: 0;
+  margin: 0 5px;
+  min-width: 25px;
+  height: 20px;
+  overflow: hidden;
+  background: no-repeat url('https://www.paypalobjects.com/webstatic/mktg/wright/icons/px-video-sprite.png');
+}
+.px-video-controls button:focus {
+  border: 1px #999 dotted;
+  outline: none;
+}
+.px-video-controls button {
+  cursor: pointer;
+}
+button.px-video-restart {
+  margin-left: 0;
+}
+/* restart button */
+
+.px-video-controls button.px-video-restart {
+  background-position: -6px -333px;
+}
+.px-video-controls button.px-video-restart:hover,
+.px-video-controls button.px-video-restart:focus {
+  background-position: -6px -297px;
+}
+
+/* rewind button */
+.px-video-controls button.px-video-rewind {
+  background-position: -6px -189px;
+}
+.px-video-controls button.px-video-rewind:hover,
+.px-video-controls button.px-video-rewind:focus {
+  background-position: -6px -153px;
+}
+
+/* play button */
+.px-video-controls button.px-video-play {
+  background-position: -6px -45px;
+}
+.px-video-controls button.px-video-play:hover,
+.px-video-controls button.px-video-play:focus {
+  background-position: -6px -9px;
+}
+
+/* pause button */
+.px-video-controls button.px-video-pause {
+  background-position: -6px -117px;
+}
+.px-video-controls button.px-video-pause:hover,
+.px-video-controls button.px-video-pause:focus {
+  background-position: -6px -81px;
+}
+
+/* forward button */
+.px-video-controls button.px-video-forward {
+  background-position: -6px -261px;
+}
+.px-video-controls button.px-video-forward:hover,
+.px-video-controls button.px-video-forward:focus {
+  background-position: -6px -225px;
+}
+
+/* captions button */
+.px-video-captions-btn-container label {
+  display: inline-block;
+  width: 25px;
+  height: 20px;
+  margin-left: 25px;
+  background: no-repeat url('https://www.paypalobjects.com/webstatic/mktg/wright/icons/px-video-sprite.png');
+  background-position: -6px -835px;
+}
+.px-video-captions-btn-container input[type="checkbox"]:focus+label {
+  outline: 1px #999 dotted;
+  background-position: -6px -799px;
+}
+.px-video-captions-btn-container input[type="checkbox"]:hover+label {
+  background-position: -6px -799px;
+  cursor: pointer;
+}
+.px-video-captions-btn-container input[type="checkbox"]:focus+label {
+  outline: 1px #999 dotted;
+  background-position: -6px -799px;
+}
+.px-video-captions-btn-container input[type="checkbox"]:checked+label {
+  background-position: -6px -871px;
+}
+
+/* mute button */
+.px-video-mute-btn-container label {
+  display: inline-block;
+  width: 25px;
+  height: 20px;
+  margin-left: 240px;
+  margin-top: 2px;
+  background: no-repeat url('https://www.paypalobjects.com/webstatic/mktg/wright/icons/px-video-sprite.png');
+  background-position: -6px -476px;
+}
+.px-video-mute-btn-container input[type="checkbox"]:focus+label {
+  outline: 1px #999 dotted;
+  background-position: -6px -440px;
+}
+.px-video-mute-btn-container input[type="checkbox"]:hover+label {
+  background-position: -6px -440px;
+  cursor: pointer;
+}
+.px-video-mute-btn-container input[type="checkbox"]:focus+label {
+  outline: 1px #999 dotted;
+  background-position: -6px -440px;
+}
+/* checked state of mute button */
+.px-video-mute-btn-container input[type="checkbox"]:checked+label {
+  background-position: -6px -692px;
+}
+.px-video-mute-btn-container input[type="checkbox"]:checked:hover+label,
+.px-video-mute-btn-container input[type="checkbox"]:checked:focus+label {
+  background-position: -6px -656px;
+}
+
+/* volume range input */
+.px-video-controls input[type='range'] {
+  -webkit-appearance: none;
+  height: 6px;
+  width: 100px;
+  margin-top: 8px;
+  background-color: #E6E6E6;
+  outline:none;
+}
+.px-video-controls input[type='range']:focus::-webkit-slider-thumb {
+  outline: 1px #999 dotted;
+}
+.px-video-controls input[type='range']::-moz-range-track {
+  -moz-appearance: none;
+  height: 6px;
+  background-color: #E6E6E6;
+  border: none;
+}
+.px-video-controls input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  height: 10px;
+  width: 6px;
+  background-color: #666;
+}
+.px-video-controls input[type='range']::-moz-range-thumb {
+  height: 12px;
+  width: 8px;
+}
+/* fixing display for IE10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .px-video-controls input[type='range'] {
+    position: relative;
+    padding: 0;
+    height: 8px;
+    top: -3px;
+  }
+  .px-video-time {
+    margin-top: 4px;
+  }
+  .px-video-captions {
+    padding: 8px;
+    min-height: 36px;
+  }
+}
+
+/* Fullscreen styles */
+.px-video-fullscreen-btn-container label {
+  display: inline-block;
+  width: 25px;
+  height: 20px;
+  margin: 0 10px;
+  background: no-repeat url('https://www.paypalobjects.com/webstatic/mktg/wright/icons/px-video-sprite.png');
+  background-position: -6px -907px;
+}
+.px-video-fullscreen-btn-container input[type="checkbox"]:focus+label {
+  outline: 1px #999 dotted;
+  background-position: -6px -943px;
+}
+.px-video-fullscreen-btn-container input[type="checkbox"]:hover+label {
+  background-position: -6px -943px;
+  cursor: pointer;
+}
+.px-video-fullscreen-btn-container input[type="checkbox"]:focus+label {
+  outline: 1px #999 dotted;
+  background-position: -6px -943px;
+}
+.px-video-fullscreen-btn-container input[type="checkbox"]:checked+label {
+  background-position: -6px -979px;
+}
+.px-video-fullscreen-btn-container input[type="checkbox"]:checked:hover+label {
+  background-position: -6px -1015px;
+}
+.px-video-container.fullscreen {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-cursor-visibility: auto-hide;
+}
+.display-inline {
+  display: inline-block;
+  vertical-align: top;
+}
+/* style applied through js */
+.px-video-controls.js-fullscreen-controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 940;
+  background: white;
+  text-align: center;
+}
+
+  .px-video-captions.js-fullscreen-captions {
+  min-height: 3.5em;
+  font-size: 2.5em;
+  padding: 1em;
+}
+
+.pal-blue{background-color:#009cde}.pay-blue{background-color:#003087}.pink{background-color:#de0063}.purple{background-color:#640487}.green{background-color:#00cf92}.orange{background-color:#ff9600}.pink,.purple,.green,.orange,.pink *,.purple *,.green *,.orange *,.pay-blue *,.pal-blue *{color:#fff}.video-player{position:relative;background:#000;background-position:center center;background-repeat:no-repeat;background-size:cover;overflow:hidden;cursor:pointer}.video-player:after{background:transparent url("https://www.paypalobjects.com/webstatic/mktg/kb/play-overlay.png") center center no-repeat;content:"";overflow:hidden;width:100%;height:100%;pointer-events:none;position:absolute;top:0;left:0;z-index:10}.video-player.loaded{cursor:auto}.video-player.loaded:after{display:none;background-image:none}.video-player a{cursor:pointer}.video-player .video-controls{position:absolute;bottom:0;left:0;height:34px;width:100%;background-color:#9191a9;background-color:rgba(245,245,245,0.3);-webkit-transform:translate3d(0, 0, 0);-moz-transform:translate3d(0, 0, 0);-ms-transform:translate(0, 0);transform:translate3d(0, 0, 0);-webkit-transition:-webkit-transform .4s ease-in-out;-moz-transition:-moz-transform .4s ease-in-out;-ms-transition:-ms-transform .4s ease-in-out;transition:transform .4s ease-in-out}.video-player.playing .video-controls.autohide{-webkit-transform:translate3d(0, 34px, 0);-moz-transform:translate3d(0, 34px, 0);-ms-transform:translate(0, 34px);transform:translate3d(0, 34px, 0)}.video-player.playing:hover .video-controls.autohide{-webkit-transform:translate3d(0, 0, 0);-moz-transform:translate3d(0, 0, 0);-ms-transform:translate(0, 0);transform:translate3d(0, 0, 0)}.video-controls a.video-play{display:inline-block;width:28px;height:28px;margin-left:15px;margin-right:20px;margin-top:5px;background-image:url('https://www.paypalobjects.com/webstatic/mktg/kb/play-pause-sprite.png');background-repeat:no-repeat;background-position:0 -1px;z-index:auto;opacity:.7;-moz-transition:all .2s ease-in-out;-webkit-transition:all .2s ease-out-in;-ms-transition:all .2s ease-out-in;transition:all .2s ease-in-out}.video-player .video-controls a.paused-button{background-repeat:no-repeat;background-position:-29px -1px}.video-player .video-seek{display:inline-block;position:relative;top:-12px;width:520px;height:8px;margin-top:13px;border-radius:15px;background:#535353;background:-moz-linear-gradient(top, #bababa 0, #dedee2 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #bababa), color-stop(100%, #dedee2));background:-webkit-linear-gradient(top, #bababa 0, #dedee2 100%);background:-ms-linear-gradient(top, #bababa 0, #dedee2 100%);background:linear-gradient(to bottom, #bababa 0, #dedee2 100%);box-shadow:inset 0 -2px 2px #efefef}.video-player .video-seek .ui-slider-handle{width:10px;height:20px;border:none;top:-6px;border-radius:6px;box-shadow:inset 0 -2px 2px rgba(101,101,149,0.7);background:#e6e6e6;background:-moz-linear-gradient(top, #e6e6e6 0, #d5d5d5 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #e6e6e6), color-stop(100%, #d5d5d5));background:-webkit-linear-gradient(top, #e6e6e6 0, #d5d5d5 100%);background:-ms-linear-gradient(top, #e6e6e6 0, #d5d5d5 100%);background:linear-gradient(to bottom, #e6e6e6 0, #d5d5d5 100%)}.video-player .video-seek .ui-slider-handle.ui-state-hover{background:#fff}.video-player .video-seek .ui-slider-loaded{display:block;width:100%;height:100%;left:0;bottom:0;border:0 none;position:absolute;z-index:1;border-radius:6px;box-shadow:inset 0 2px 2px rgba(101,101,149,0.4);background:#c4c4c4;background:-moz-linear-gradient(top, #cecece 0, #adadad 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #cecece), color-stop(100%, #adadad));background:-webkit-linear-gradient(top, #cecece 0, #adadad 100%);background:-ms-linear-gradient(top, #cecece 0, #adadad 100%);background:linear-gradient(to bottom, #cecece 0, #adadad 100%)}.video-player .video-seek .ui-slider-range{border-radius:15px;box-shadow:inset 0 -3px 3px rgba(57,162,206,0.7);background:#4cbae8;background:-moz-linear-gradient(top, #4cbae8 0, #39a2ce 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #4cbae8), color-stop(100%, #39a2ce));background:-webkit-linear-gradient(top, #4cbae8 0, #39a2ce 100%);background:-ms-linear-gradient(top, #4cbae8 0, #39a2ce 100%);background:linear-gradient(to bottom, #4cbae8 0, #39a2ce 100%);z-index:2}.video-player .video-controls .volume-box{position:absolute;bottom:1px;right:0;overflow:hidden;width:24px;height:30px;color:#fff;padding:0 10px}.video-player .video-controls .volume-box:hover{height:135px;padding-top:5px}.video-player .video-controls .volume-box:hover .volume-slider{position:relative;visibility:visible;opacity:1}.video-player .video-controls .volume-slider{position:relative;height:100px;width:8px;top:0;left:0;visiblity:hidden;opacity:0;border-radius:4px;box-shadow:inset 0 3px 3px rgba(239,239,239,0.7);background:#dedee2;background:-moz-linear-gradient(top, #dedee2 0, #bababa 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #dedee2), color-stop(100%, #bababa));background:-webkit-linear-gradient(top, #dedee2 0, #bababa 100%);background:-ms-linear-gradient(top, #dedee2 0, #bababa 100%);background:linear-gradient(to bottom, #dedee2 0, #bababa 100%);-webkit-transition:all .1s ease-in-out;-moz-transition:all .1s ease-in-out;-ms-transition:all .1s ease-in-out;transition:all .1s ease-in-out}.video-player .video-controls .volume-slider .ui-slider-handle{width:16px;height:9px;left:-4px;margin-bottom:-0.6em;margin-left:0;border-radius:6px;box-shadow:inset 0 -2px 2px rgba(101,101,149,0.7);background:#e6e6e6;background:-moz-linear-gradient(top, #e6e6e6 0, #d5d5d5 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #e6e6e6), color-stop(100%, #d5d5d5));background:-webkit-linear-gradient(top, #e6e6e6 0, #d5d5d5 100%);background:-ms-linear-gradient(top, #e6e6e6 0, #d5d5d5 100%);background:linear-gradient(to bottom, #e6e6e6 0, #d5d5d5 100%)}.video-player .video-controls .volume-slider .ui-slider-handle .ui-state-hover{background:#fff}.video-player .volume-slider .ui-slider-range{border-radius:15px;box-shadow:inset -3px 0 3px rgba(76,186,232,0.7);background:#4cbae8;background:-moz-linear-gradient(top, #4cbae8 0, #39a2ce 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #4cbae8), color-stop(100%, #39a2ce));background:-webkit-linear-gradient(top, #4cbae8 0, #39a2ce 100%);background:-ms-linear-gradient(top, #4cbae8 0, #39a2ce 100%);background:linear-gradient(to bottom, #4cbae8 0, #39a2ce 100%)}.video-player .video-controls .volume-button{position:absolute;bottom:3px;right:15px;display:block;width:29px;height:25px;border-radius:2px;background-color:rgba(245,245,245,0.6);background-position:center center;background-image:url('https://www.paypalobjects.com/webstatic/mktg/kb/volumefull.png');background-image:-webkit-image-set(url("https://www.paypalobjects.com/webstatic/mktg/kb/volumefull.png") 1x, url("https://www.paypalobjects.com/webstatic/mktg/kb/volumefull2x.png") 2x);background-size:23px 23px;background-repeat:no-repeat}.video-player .video-controls .volume-mute{background-image:url('https://www.paypalobjects.com/webstatic/mktg/kb/volumemute.png');background-image:-webkit-image-set(url("https://www.paypalobjects.com/webstatic/mktg/kb/volumemute.png") 1x, url("https://www.paypalobjects.com/webstatic/mktg/kb/volumemute2x.png") 2x);background-size:23px 23px;background-repreat:no-repeat}.video-player .video-fullscreen{display:block;position:absolute;right:10px;top:10px;width:30px;height:30px;background-color:rgba(245,245,245,0.6);background-position:center center;background-repeat:no-repeat;background-image:url("https://www.paypalobjects.com/webstatic/mktg/kb/fullscreen.png");background-image:-webkit-image-set(url("https://www.paypalobjects.com/webstatic/mktg/kb/fullscreen.png") 1x, url("https://www.paypalobjects.com/webstatic/mktg/kb/fullscreen2x.png") 2x);background-size:24px 24px;border-radius:2px;overflow:hidden;text-indent:-999em;opacity:0;-webkit-transition:opacity .2s ease-in-out;-moz-transition:opacity .2s ease-in-out;-ms-transition:opacity .2s ease-in-out;transition:opacity .2s ease-in-out}.video-player:hover .video-fullscreen{opacity:1}.ui-dialog .video-player .video-fullscreen{display:none}.video-player.fullscreen{position:fixed;top:0;left:0;z-index:99999;width:100%;height:100%}.video-player.fullscreen .video-fullscreen{background-image:url("https://www.paypalobjects.com/webstatic/mktg/kb/shrink.png");background-image:-webkit-image-set(url("https://www.paypalobjects.com/webstatic/mktg/kb/shrink.png") 1x, url("https://www.paypalobjects.com/webstatic/mktg/kb/shrink2x.png") 2x);background-size:24px 24px}.ui-slider-handle{position:absolute;z-index:2;display:block;margin-left:-0.6em;outline:none}.ui-slider-range{display:block;width:100%;height:100%;left:0;bottom:0;border:0 none;position:absolute;z-index:1}.video-modal .ui-dialog-content{padding-bottom:1.5em}.ui-dialog .ui-dialog-titlebar-close:focus{border:1px dotted #999}.signup__modal-wrapper{color:#2c2e2f;position:fixed;z-index:2;height:100%}.signup__modal-wrapper .modal-header{position:relative}.signup__modal-wrapper .modal-header .close{position:absolute;top:6px;right:-3px;outline:none}.signup__modal-wrapper .btn-block{display:block;padding-top:12px;padding-bottom:14px}.signup__modal-wrapper .modal-dialog{max-width:540px}.signup__modal-wrapper .modal-content{padding-bottom:30px}.signup__modal-wrapper p{font-family:pp-sans-big-light,Helvetica Neue,Arial,sans-serif}.signup__radio-row{margin-left:30px}.signup__radio-row:first-child{margin-bottom:30px}.signup__radio-row label{cursor:pointer;font-size:18px;font-size:1.28571429rem;line-height:1.5;padding-left:6px;margin-bottom:0}.signup__radio-row p{padding:0;padding-left:27px;font-size:15px;font-size:1.07142857rem}.signup__radio-wrapper{padding-top:50px}.signup__radio-wrapper input[type="radio"]{cursor:pointer;position:relative;opacity:0;z-index:2;transform:scale(4)}.signup__radio-wrapper input[type="radio"]:checked+.signup__radio-over:after{position:absolute;width:14px;height:14px;left:6px;top:2px;background:#009cde}.signup__radio-wrapper .signup__radio-over{z-index:1;position:relative;top:-15.72px;left:-32px;display:inline-block;width:0;height:0;margin:0;padding:0}.signup__radio-wrapper .signup__radio-over:before,.signup__radio-wrapper .signup__radio-over:after{content:"";cursor:pointer;display:block;box-sizing:border-box;position:absolute;-webkit-border-radius:50%;border-radius:50%;top:-4px;width:26px;height:26px;z-index:2;border:1px solid #9da3a6}.signup-modal__headline{text-align:center;letter-spacing:inherit}.signup__cta-wrapper{margin-top:47px}.signup-modal__footer{margin-top:15px;text-align:center}.signup-modal__footer a{font-size:15px;font-size:1.07142857rem;line-height:23px}html[data-device-type="portable"] .signup-modal__headline,html[data-device-type="dedicated"] .signup-modal__headline,html[data-device-type="portable"] h2.signup-modal__headline,html[data-device-type="dedicated"] h2.signup-modal__headline{font-size:28px;font-size:2rem;margin-top:10px}html[data-device-type="portable"] .signup__modal-wrapper .modal-body,html[data-device-type="dedicated"] .signup__modal-wrapper .modal-body{padding-left:46px;padding-right:46px}html[data-device-type="portable"] .signup__modal-wrapper .modal-content,html[data-device-type="dedicated"] .signup__modal-wrapper .modal-content{padding-bottom:27px}@media (orientation:landscape){html[data-device-type="mobile"] body.signup-modal__popup-active{overflow:hidden}html[data-device-type="mobile"] .signup__modal-wrapper .modal,html[data-device-type="mobile"] .signup__modal-wrapper .modal-backdrop{overflow-y:auto}html[data-device-type="mobile"] .signup__modal-wrapper .modal-content{margin-bottom:30px}html[data-device-type="mobile"] .signup__modal-wrapper .modal.in{top:0}html[data-device-type="mobile"] .signup__modal-wrapper .modal.in .modal-dialog{margin-left:-270px;left:50%;transform:none;top:30px}}html[data-device-type="portable"] .signup__modal-wrapper .modal{top:150px}.btn-continue{max-width:160px}.sublist-cta-wrapper{z-index:0}@media (orientation:portrait){html[data-device-type="mobile"] .signup__modal-wrapper .modal-body{padding:15px}html[data-device-type="mobile"] .signup__modal-wrapper .modal{overflow-y:auto}html[data-device-type="mobile"] .signup__modal-wrapper .modal-content{padding-bottom:0}}html[data-device-type="mobile"] .signup__radio-row p{padding:0;padding-left:27px}@media (orientation:portrait){html[data-device-type="mobile"] .signup__modal-wrapper .modal-body{position:static}html[data-device-type="mobile"] .signup__modal-wrapper .modal-header .close{position:fixed}html[data-device-type="mobile"] .signup__cta-wrapper,html[data-device-type="mobile"] .signup-modal__footer{position:absolute;left:0;right:0}html[data-device-type="mobile"] .signup__cta-wrapper{bottom:92px}html[data-device-type="mobile"] .signup-modal__footer{bottom:60px}}.signupSubHeadline{font-size:1.07rem;text-align:center;padding-top:10px}img{max-width:100%}.fadeBackground{background:#f5f5f5}section{background-color:#fff;position:relative;-webkit-transform:translate3d(0, 0, 0)}.hero-hugger-spacer{height:80px;overflow:hidden}#sticky-nav,.floating-bar-spacer{margin-top:-80px;position:relative;z-index:2}html[data-device-type="mobile"] #sticky-nav,html[data-device-type="mobile"] .floating-bar-spacer{margin-top:0}html[data-device-type="mobile"] .hero-hugger-spacer{height:0}.floating-bar-spacer{z-index:1}#sticky-nav{box-shadow:0 -1px 0 rgba(0,0,0,0.1),0 1px 0 rgba(0,0,0,0.1);z-index:3}#sticky-nav .controls{text-align:right}#sticky-nav.on{margin-top:0;position:fixed;z-index:99}#sticky-nav form{margin-top:0}#fixed-top>.table-row>#hero{vertical-align:middle}.hero-hugger-spacer{background-color:#fff}.hero-bg .editorial-container{display:table}.hero-bg{background-image:url("https://www.paypalobjects.com/digitalassets/c/website/marketing/apac/KR/merchant/hero-bg-merchant-hkt.JPG")}.hero-bg ul{padding-left:10px}.hero-bg .phone-line{color:#fff}.hero-bg .hatch{color:#fff}#hero .span12>.editorial-cell{width:100%}.hero-bg .transaction-tray{max-width:305px}.transaction-tray p,.merchant p{font-size:13px;font-size:.92857143rem;line-height:1.25em}.transaction-tray p{line-height:2em;padding-bottom:0}.transaction-tray p:first-child{padding-top:1px;border-bottom:1px solid #666;line-height:2.5em}.transaction-tray a{font-weight:bold}.transaction-tray p b{font-size:16px}.transaction-tray p span{display:inline-block}.transaction-tray p span:first-child{margin-right:6px;padding-right:6px;border-right:1px solid #666}.transaction-tray p:last-child,.transaction-tray a{font-size:11px;line-height:1.5em;padding-top:8px}.merchant-heroTray .heroBtn{width:230px;max-width:none}.phone-line{line-height:2em}.hero-bg .phone-line{margin-top:12px}#hero-down-arrow{position:absolute;bottom:20%;left:50%;margin:-6px 0 0 -19px}#get-started,#more-than-payments-container{padding:60px 0}#get-started .pulloutHeadline{float:none}#get-started .step-para{font-size:16px;font-size:1.14285714rem;line-height:1.5em;padding-top:12px;padding-bottom:5px}#get-started-carousel,#more-than-payments{margin-top:30px}.merchant-links-bar{text-align:right;line-height:46px}.merchant-links{padding-left:20px;font-weight:normal}.merchant-links-panel{padding:20px 0;-moz-box-sizing:border-box;box-sizing:border-box}.merchant-links-panel .span6{line-height:40px}.light .span3.merchant-panel{border-color:#fff}.merchant-links-panel .btn{line-height:1.8em;min-width:235px;opacity:0;-webkit-transition:opacity .3s ease;transition:opacity .3s ease}html[data-device-type="portable"] .merchant-links-panel .btn{-webkit-transition:all 0 ease 0;transition:all 0 ease 0}.floating-bar.on .btn{opacity:1}ul.merchant-bullets{margin-left:15px;list-style:disc}.merchant-heroTray{padding:30px 0 20px;border-radius:5px;margin-top:20px;max-width:564px}.row-fluid .merchant-panel{background:#fff;padding:30px 16px;border:1px solid;border-color:#E5E5E5 #D9D9D9 #CCC;-moz-box-sizing:border-box;box-sizing:border-box;cursor:pointer}.row-fluid .disabledLink{cursor:auto}.disabledLink p:last-child{padding:0}#get-started .merchant-panel .contentPara{min-height:130px}#more-than-payments .merchant-panel .contentPara{min-height:70px}.panel-img{width:70px;margin-bottom:20px}.chart-bgcolor{padding-top:30px;padding-bottom:60px;background:#23a0ef;background:-webkit-gradient(radial, center center, 0, center center, 100%, color-stop(0, #23a0ef), color-stop(100%, #07447b));background:-webkit-radial-gradient(center, ellipse cover, #23a0ef 0, #07447b 100%);background:-webkit-radial-gradient(center, ellipse, #23a0ef 0, #07447b 100%);background:radial-gradient(ellipse at center, #23a0ef 0, #07447b 100%)}.chart-bgcolor .row-fluid{background:transparent}html .chart-bgcolor .containerCentered:first-child{padding:0}.chart-bgcolor h3{white-space:nowrap}.chart-bgcolor .pulloutPara{color:#e2f4ff;margin-bottom:20px}.chart-bgcolor .sideKickHeadline{margin-bottom:10px}.chart-container{position:relative;margin-bottom:20px}.chart-container img{width:100%;min-width:1004px;height:239px}.chart-container .chart-marker{padding:4px;position:absolute;background:#fff;border-radius:8px;color:#065f9d;font-size:10px;font-weight:bold}.chart-container #marker1{left:9.06374502%;top:152px}.chart-container #marker2{left:29.98007968%;top:96px}.chart-container #marker3{left:51.09561753%;top:31px}.chart-container #marker4{left:72.11155378%;top:69px}.chart-container .chart-marker:after{content:'';width:0;height:0;position:absolute;bottom:-20px;left:50%;margin-left:-10px;border:10px solid transparent;border-top-color:#fff}.chart-container .chart-marker.top:after{bottom:auto;top:-20px;border-top-color:transparent;border-bottom-color:#fff}.chart-bullets{font-size:13px;line-height:17px;color:#e2f4ff;margin:0;white-space:normal}.chart-bullets li{padding-left:20px;background:transparent url(https://www.paypalobjects.com/webstatic/en_US/mktg/wright/merchant/blue-check.png) left 2px no-repeat;background-size:11px 13px}.chart-bgcolor .legal-notes{color:#e2f4ff}@media (max-width:71.71428571em){.chart-bgcolor h3{white-space:normal}}.chart-links{margin-top:20px}.merchant .expander{display:none}.merchant p{line-height:1.5em}.merchant .btn{margin:26px 0;line-height:2.5em;width:92%}.merchant h4{padding:10px 0 0}.merchant .transaction-tray p:first-child{line-height:2.5em}.panel-three{padding-top:60px}.panel-three a{font-size:14px;font-size:1rem;font-weight:normal}.panel-three .sideKickHeadline{padding-bottom:25px}#signup-modal h4{margin:20px 0}#signup-modal .btn{max-width:46%}#signup-modal ul{list-style-type:disc;padding-left:30px;margin-bottom:30px}html[data-device-type="mobile"] #signup-modal .btn{margin-bottom:14px}html[data-device-type="mobile"] #signup-modal ul{margin-bottom:14px}html[data-device-type="portable"] .merchant-links-panel,html[data-device-type="mobile"] .merchant-links-panel{background:#f4f4f4;padding:16px 0}html[data-device-type="portable"] .hero-bg{background-position:center center;background-size:cover}html[data-device-type="portable"] #sticky-nav #jump-bar-select{height:46px}html[data-device-type="mobile"] .hero-bg{background-size:auto 120%}@media (min-width:480px){html[data-device-type="mobile"] .hero-bg{background-size:auto 160%}}html[data-device-type="mobile"] .merchant-heroTray{background-color:transparent;max-width:100%;padding:0}html[data-device-type="mobile"] .hero-bg .editorial-cell{height:auto;margin-top:0;padding-top:0}html[data-device-type="portable"] #get-started,html[data-device-type="portable"] #more-than-payments-container{padding:40px 0}html[data-device-type="mobile"] .row-fluid .containerMobileFullWidth .merchant-panel{width:90%;min-height:420px;margin-left:10px}html[data-device-type="portable"] #get-started-carousel .merchant-panel{width:48%;margin-bottom:30px;min-height:330px}html[data-device-type="portable"] #more-than-payments .merchant-panel h3{min-height:80px}html[data-device-type="portable"] #get-started-carousel .merchant-panel:nth-child(2n+1){margin-left:0}html[data-device-type="portable"] #get-started .merchant-panel .contentPara{min-height:100px}html[data-device-type="portable"] #more-than-payments .merchant-panel .contentPara{min-height:140px}@media all and (max-width:768px){html[data-device-type="portable"] #more-than-payments .merchant-panel h3,html[data-device-type="portable"] #more-than-payments .merchant-panel .contentPara{min-height:110px}}html[data-device-type="mobile"] .merchant-links-panel .span6.pull-right{width:auto;float:none}html[data-device-type="mobile"] .merchant-panel:first-child{margin-left:0}html[data-device-type="mobile"] #more-than-payments .sideKickHeadline{min-height:72px}html[data-device-type="mobile"] #more-than-payments-container{padding-top:20px}html[data-device-type="mobile"] .play>span{top:30%}html[data-device-type="mobile"] .panel-three{padding-top:0}html[data-device-type="mobile"] .panel-three .sideKickHeadline{margin-left:10px}html[data-device-type="mobile"] #get-started,html[data-device-type="mobile"] #more-than-payments-container{padding:40px 0 0}html[data-device-type="mobile"] #get-started-carousel,html[data-device-type="mobile"] #more-than-payments{margin-top:10px}html[data-device-type="mobile"] .merchant .transaction-tray{margin:0}html[data-device-type="mobile"] .merchant .phone-line{margin-bottom:20px}html[data-device-type="mobile"] .merchant .btn{width:100%}html[data-device-type="mobile"] .merchant .expanding-rows{margin-left:-10px;margin-right:-10px;padding-right:0;padding-top:0}html[data-device-type="mobile"] .merchant .expanding-rows h4,html[data-device-type="mobile"] .merchant .expanding-rows p{padding-right:3%;padding-left:3%}html[data-device-type="mobile"] .merchant .expanding-rows h4{padding-bottom:10px}html[data-device-type="mobile"] .merchant .expander{position:relative;display:block;width:21px;height:21px;text-indent:-999em;overflow:hidden;border:1px solid #4d4d4d;border-radius:14px;float:right;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}html[data-device-type="mobile"] .merchant .expander:after{content:'+';display:block;position:absolute;width:21px;height:21px;font-size:21px;line-height:16px;text-align:center;color:#4d4d4d;top:0;left:0;text-indent:0}html[data-device-type="mobile"] .merchant .expander.open:after{content:'–'}html[data-device-type="mobile"] .merchant .expandable{height:0;overflow:hidden;padding-top:0;padding-bottom:0;-webkit-transition:height .3s ease;transition:height .3s ease}html[data-device-type="mobile"] #get-started .merchant-panel .contentPara{min-height:130px}html[data-device-type="mobile"] #more-than-payments .merchant-panel .contentPara{min-height:110px}html[data-device-type="mobile"] .merchant .expandable.open{height:50px}html[data-device-type="mobile"] .merchant .expanding-rows p.expandable{border-bottom:1px solid #4d4d4d}html[data-device-type="mobile"] .merchant .expanding-rows:last-child p.expandable:last-child{border-bottom:none}html[data-device-type="mobile"] #fixed-top .hero-bg .editorial-cell{padding-top:0;text-align:center}@media (orientation:portrait) and (max-width:1024px){html[data-device-type="portable"] .row-fluid .offset1{margin-left:3%}}@media only screen and (min-width:321px) and (max-width:767px) and (orientation:landscape){html[data-device-type="mobile"] #merchTreatment{height:250px !important}}.moving-background video{opacity:100}.moving-background video{right:0;left:auto}.moving-background .mb-button{bottom:156px}#merchTreatment .editorial-cell{display:inline-block;line-height:1.5em;margin-left:105px;vertical-align:middle;width:40%}html[data-device-type="dedicated"] #merchTreatment{height:700px}html[data-device-type="dedicated"] .sticky-nav-panel .pull-right p{display:none}html[data-device-type="mobile"] #merchTreatment{height:150px}@media (orientation:portrait){html[data-device-type="mobile"] .moving-background video{top:-15px}}#merchTreatment .btn{background:none repeat scroll 0 0 transparent;color:transparent;height:81%;width:82%}html[data-device-type="portable"] #merchTreatment .btn{height:50%;width:280%;vertical-align:top}.video-loaded{background-image:none}html[data-device-type="dedicated"] .span6{width:42%}#hero .editorial-cell ul li{font-size:1.28571rem;line-height:1.333em;padding-bottom:0;padding-top:0}.hero-bg-treatment ul.merchant-bullets{margin-left:25px}html[data-device-type="dedicated"] div#other.editorial-container.containerCentered{display:none}div#other.editorial-container.containerCentered{display:block}#payment-solutions{z-index:1}#payment-solutions .icon-holder{margin-bottom:15px}#payment-solutions>.row-fluid{background:#009cde}#payment-solutions h3,#payment-solutions p,#payment-solutions a{color:#fff}#payment-solutions .span-pp-2{padding-top:60px}#payment-solutions .span-pp-2:first-child{margin-left:0}#payment-solutions .panel-img{margin-bottom:32px}#payment-solutions .span3 h2{font-size:2rem;line-height:2.1rem}#pullout-1{z-index:2}html[data-device-type="dedicated"] #pullout-1.row-fluid .pulloutPara{margin:auto}html[data-device-type="dedicated"] #pullout-1.row-fluid .span8{width:100%;max-width:937px}html[data-device-type="dedicated"] #pullout-1.row-fluid,html[data-device-type="portable"] #pullout-1.row-fluid{padding-bottom:0}html[data-device-type="dedicated"] #pullout-1.row-fluid img,html[data-device-type="portable"] #pullout-1.row-fluid img{position:relative;top:100px;margin-top:-60px}html[data-device-type="mobile"] #payment-solutions .icon-holder{margin-bottom:15px}html[data-device-type="mobile"] #pullout-1.row-fluid .pulloutPara{padding-bottom:0;text-align:left}html[data-device-type="mobile"] #pullout-1.row-fluid .pulloutPara+p{display:none}html[data-device-type="mobile"] #pullout-1.row-fluid h2{text-align:left;color:#1c1c1c}html[data-device-type="mobile"] #why-paypal .panel-header{padding-bottom:0}html[data-device-type="mobile"] #merchTreatment .btn{line-height:20px;width:40%;background:none repeat scroll 0 0 transparent;color:transparent;font-size:11px;margin-bottom:99px;margin-left:-12px;margin-top:15px}html[data-device-type="mobile"] .heroBtn{margin:0 auto 30px}html[data-device-type="mobile"] .panel-img{margin-bottom:0}html[data-device-type="mobile"] #hero-down-arrow{bottom:2%}html[data-device-type="mobile"] #payment-solutions{padding:0}html[data-device-type="mobile"] #payment-solutions .span3{width:100%;margin-left:0;padding-right:0;padding-top:0;border-top:1px solid #fff}html[data-device-type="mobile"] #payment-solutions .span3:first-child{border-top:0}html[data-device-type="mobile"] #payment-solutions .span3.open{padding-bottom:20px}html[data-device-type="mobile"] #payment-solutions .containerCentered{padding-left:0;padding-right:0}html[data-device-type="mobile"] #payment-solutions img{display:none}html[data-device-type="mobile"] #payment-solutions h2{font-size:21px;font-size:1.5rem;position:relative;padding:20px 45px 20px 15px;cursor:pointer}html[data-device-type="mobile"] #payment-solutions h2:after{content:'';position:absolute;display:block;right:30px;top:50%;width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-top:7px solid #fff}html[data-device-type="mobile"] #payment-solutions .span-pp-2.open h2:after{width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:7px solid #fff;border-top:0}html[data-device-type="mobile"] #payment-solutions h2+p,html[data-device-type="mobile"] #payment-solutions h2+p+p{display:none}html[data-device-type="mobile"] #payment-solutions h2+p{padding-left:19px;padding-right:22px}html[data-device-type="mobile"] #payment-solutions h2+p+p{margin-left:19px;margin-right:22px}#shop{padding:60px 0 0 0}#shop .logo-shop{position:relative;display:inline-block;height:99pt;margin-top:25px;text-align:center}#shop .logo-shop:nth-of-type(1){margin-left:0}#shop .logo-shop img{display:block;margin:0 auto;max-width:100%;height:auto}#shop .shop-link{padding-top:0;padding-bottom:0}.fancy-down-arrow-grey{background-image:url("https://www.paypalobjects.com/digitalassets/c/website/marketing/apac/hk/fancy-down-arrow2x_blue.png");border-color:#009cde}@media (orientation:portrait){html[data-device-type="portable"] #shop .span-pp-3{margin-left:0}}html[data-device-type="mobile"] #payment-solutions .icon-holder{margin-bottom:9px}html[data-device-type="dedicated"] #shop p.pulloutPara{margin:0 125px}.tickle-bar{padding:10px 0;font-size:18px}.tickle-bar .tickle-cell{text-align:center}@media (orientation:portrait){html[data-device-type="mobile"] .tickle-bar .btn-white-border{margin-top:10px}}#hero-down-arrow .btn.btn-white-border{width:230px;max-width:230px}html[data-device-type="portable"] #hero-down-arrow .btn.btn-white-border,html[data-device-type="dedicated"] #hero-down-arrow .btn.btn-white-border{margin-left:0}.youtube-iframe{width:100%}.videoCTA{margin-top:10px}@media (max-width:767px){html[data-device-type=mobile] .heroBtn{margin-bottom:0}.hero-bg{background-position:70%}html[data-device-type=mobile] .hero-bg{background-size:auto 100%}html[data-device-type=mobile] #fixed-top .hero-bg .editorial-cell{height:435px}.videoCTA{margin-top:0}}@media (max-width:767px) and (orientation:landscape){html[data-device-type=mobile] #fixed-top .hero-bg .editorial-cell{height:335px}}.btn.heroBtn,#hero-down-arrow .btn.btn-white-border,.closing-cta{width:300px;max-width:none}.closing-cta{margin-top:20px}.tickle-bar{padding:20px 0;font-size:17px;background:#F5F5F5;margin-top:-80px;font-family:pp-sans-small-light,Helvetica Neue,Arial,sans-serif;color:#2c2e2f;z-index:2;font-size:1.28571429rem}.tickle-bar__btn{display:inline;padding:7px 25px;margin-top:-3px;max-width:160px;border-radius:25px;line-height:1.5em}.tickle-bar .pypl-btn--outline{box-shadow:none;border:1px solid #0070ba;margin-left:10px}@media (max-width:767px){.tickle-bar{font-size:15px;font-size:1.07142857rem}}.pypl-btn{display:inline-block;margin-bottom:0;font-size:14px;font-size:1rem;font-weight:600;line-height:22px;-webkit-font-smoothing:antialiased;text-align:center;text-decoration:none;vertical-align:middle;cursor:pointer;border-radius:25px;border:none;-moz-box-sizing:border-box;box-sizing:border-box}@media (max-width:767px){.tickle-bar{border-top:1px solid #d4d9dc;margin-top:0;line-height:25px}.tickle-bar__btn{display:block;margin:10px auto}}.container-fluid{margin-left:auto;margin-right:auto;padding-left:.9375rem;padding-right:.9375rem}@media (max-width:767px){.tickle-bar__btn{display:block;margin:10px auto;margin-left:0;max-width:320px}}@media (max-width:767px){.hero-bg.lightContent .editorial-cell .pageHeadline{color:#fff}}html[data-device-type=mobile] header[role=banner].pp-header+#main>section:not(.hero-pop-out):first-of-type,html[data-device-type=portable] header[role=banner].pp-header+#main>section:not(.hero-pop-out):first-of-type,html[data-device-type=dedicated] header[role=banner].pp-header+#main>section:not(.hero-pop-out):first-of-type{padding-top:20px}@media (orientation:portrait){html[data-device-type=mobile] .hero-bg .containerCentered .hatch{padding-bottom:30px}html[data-device-type=mobile] .hero-bg .containerCentered #hero-down-arrow{bottom:0;margin-bottom:10px}}html[data-device-type=mobile] .hero-bg .editorial-cell{padding-top:75px}html[data-device-type=mobile] .tickle-bar .pypl-btn--outline{margin:10px auto}.hero-bg .containerCentered{position:relative}.hero-bg .containerCentered #hero-down-arrow{position:absolute;bottom:10%}
+
